@@ -11,6 +11,7 @@
 		3BEEB3F72C878D2C005E2E57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEB3F62C878D2C005E2E57 /* ContentView.swift */; };
 		3BEEB3F92C878D2D005E2E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEB3F82C878D2D005E2E57 /* Assets.xcassets */; };
 		3BEEB3FC2C878D2D005E2E57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEEB3FB2C878D2D005E2E57 /* Preview Assets.xcassets */; };
+		3BEEB4092C87A2F8005E2E57 /* CoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEB4082C87A2F8005E2E57 /* CoinsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3BEEB3F62C878D2C005E2E57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BEEB3F82C878D2D005E2E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEEB3FB2C878D2D005E2E57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BEEB4082C87A2F8005E2E57 /* CoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +53,9 @@
 		3BEEB3F32C878D2C005E2E57 /* NetworkingStudy */ = {
 			isa = PBXGroup;
 			children = (
-				3BEEB4032C878F5C005E2E57 /* Core */,
 				3BEEB4022C878F1B005E2E57 /* App */,
 				3BEEB3F82C878D2D005E2E57 /* Assets.xcassets */,
+				3BEEB4032C878F5C005E2E57 /* Core */,
 				3BEEB3FA2C878D2D005E2E57 /* Preview Content */,
 			);
 			path = NetworkingStudy;
@@ -96,6 +98,7 @@
 		3BEEB4052C878F6F005E2E57 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3BEEB4082C87A2F8005E2E57 /* CoinsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEEB3F72C878D2C005E2E57 /* ContentView.swift in Sources */,
+				3BEEB4092C87A2F8005E2E57 /* CoinsViewModel.swift in Sources */,
 				3BEEB3F52C878D2C005E2E57 /* NetworkingStudyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
