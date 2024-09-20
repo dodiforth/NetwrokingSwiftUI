@@ -17,11 +17,23 @@ class CoinsViewModel: ObservableObject {
         URLSession.shared.dataTask(with: url) { data, response, error in
             
             DispatchQueue.main.async {
-                if let error = error {
-                    print("DEBUG: Failed with error \(error.localizedDescription)")
-                    self.errorMessage = error.localizedDescription
+//                if let error = error {
+//                    print("DEBUG: Failed with error \(error.localizedDescription)")
+//                    self.errorMessage = error.localizedDescription
+//                    return
+//                }
+                
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    self.errorMessage = "Bad HTTP Response"
                     return
                 }
+                
+                guard httpResponse.statusCode == 200 else {
+                    self.errorMessage = "Failed to fetch with status code \(httpResponse.statusCode)"
+                    return
+                }
+                
+                print("DEBUG: Reponse code is \(httpResponse.statusCode)")
                 
                 guard let data = data else { return }
                 guard let jsonObject = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else { return }
