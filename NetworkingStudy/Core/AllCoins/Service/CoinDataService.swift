@@ -2,24 +2,45 @@ import Foundation
 
 class CoinDataService {
     
-    private let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h&locale=en"
+    //Delete "i" below for a test from ""https://api.coingeck"
+    private let urlString = "https://ap.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
-    func fetchCoins(completion: @escaping([Coin]) -> Void) {
+    func fetchCoinsWithResult(completion: @escaping(Result<[Coin], Error>) -> Void) {
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
             guard let data = data else { return }
             
             guard let coins = try? JSONDecoder().decode([Coin].self, from: data) else {
                 print("DEBUG: Failed to decode coins")
                 return }
             
-            for coin in coins {
-                print("DEBUG: Coin id \(coin.id)")
+            completion(.success(coins))
+        }.resume()
+    }
+    
+    
+    func fetchCoins(completion: @escaping([Coin]?, Error?) -> Void) {
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(nil, error)
+                return
             }
             
-            print("DEBUG: Coins decoded \(coins)")
-            completion(coins)
+            guard let data = data else { return }
+            
+            guard let coins = try? JSONDecoder().decode([Coin].self, from: data) else {
+                print("DEBUG: Failed to decode coins")
+                return }
+            
+            completion(coins, nil)
         }.resume()
     }
     

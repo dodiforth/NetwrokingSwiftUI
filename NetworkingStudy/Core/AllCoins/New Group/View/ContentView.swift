@@ -24,6 +24,10 @@ struct ContentView: View {
                     }
                 }.font(.footnote)
             }
+        }.overlay {
+            if let error = viewModel.errorMessage {
+                Text(error)
+            }
         }
     }
 }
