@@ -12,21 +12,29 @@ struct ContentView: View {
     @StateObject var viewModel = CoinsViewModel()
     
     var body: some View {
-        List {
-            ForEach(viewModel.coins) {
-                coin in
-                HStack {
-                    Text("\(coin.marketCapRank)").foregroundStyle(Color.gray)
-                    
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(coin.name).fontWeight(.semibold)
-                        Text(coin.symbol.uppercased())
+        NavigationStack {
+            List {
+                ForEach(viewModel.coins) {
+                    coin in
+                    NavigationLink(value: coin) {
+                        HStack {
+                            Text("\(coin.marketCapRank)").foregroundStyle(Color.gray)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(coin.name).fontWeight(.semibold)
+                                Text(coin.symbol.uppercased())
+                            }
+                        }.font(.footnote)
                     }
-                }.font(.footnote)
+                }
             }
-        }.overlay {
-            if let error = viewModel.errorMessage {
-                Text(error)
+            .navigationDestination(for: Coin.self, destination: { coin in
+                CoinDetailsView()
+            })
+            .overlay {
+                if let error = viewModel.errorMessage {
+                    Text(error)
+                }
             }
         }
     }
