@@ -29,7 +29,7 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(for: Coin.self, destination: { coin in
-                CoinDetailsView()
+                CoinDetailsView(coin: coin)
             })
             .overlay {
                 if let error = viewModel.errorMessage {

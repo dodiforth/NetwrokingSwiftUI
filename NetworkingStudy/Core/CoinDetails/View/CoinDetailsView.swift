@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CoinDetailsView: View {
+    let coin: Coin
+    
     var body: some View {
-        Text("Coin Details Go Here!")
+        Text(coin.name)
     }
 }
 
-#Preview {
-    CoinDetailsView()
-}
+//#Preview {
+//    CoinDetailsView()
+//}
