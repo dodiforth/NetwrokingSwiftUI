@@ -13,7 +13,7 @@ struct CoinDetailsView: View {
 //    @State private var task: Task<(), Never>?
     // Ugly way to Task and Cancel 1/2 -> uncomment this and the code below as the example
     
-    init(coin: Coin, service: CoinDataService) {
+    init(coin: Coin, service: CoinServiceProtocol) {
         self.coin = coin
         self.viewModel = CoinDetailsViewModel(coinId: coin.id, service: service)
     }
