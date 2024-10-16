@@ -7,7 +7,8 @@
 
 import Foundation
 
-let testCoinsData: Data = """
+// An array of 10 coins
+let mockCoinData_marketCapDesc: Data = """
 
 [
   {
@@ -152,7 +153,7 @@ let testCoinsData: Data = """
     "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
     "current_price": 28500,
     "market_cap": 542000000000,
-    "market_cap_rank": 1,
+    "market_cap_rank": 6,
     "fully_diluted_valuation": 600000000000,
     "total_volume": 24000000000,
     "high_24h": 28700,
@@ -179,7 +180,7 @@ let testCoinsData: Data = """
     "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
     "current_price": 1750,
     "market_cap": 210000000000,
-    "market_cap_rank": 2,
+    "market_cap_rank": 7,
     "fully_diluted_valuation": 210000000000,
     "total_volume": 12000000000,
     "high_24h": 1780,
@@ -206,7 +207,7 @@ let testCoinsData: Data = """
     "image": "https://assets.coingecko.com/coins/images/325/large/Tether.png",
     "current_price": 1,
     "market_cap": 82871987259,
-    "market_cap_rank": 3,
+    "market_cap_rank": 8,
     "fully_diluted_valuation": 82871987259,
     "total_volume": 20491320898,
     "high_24h": 1.006,
@@ -233,7 +234,7 @@ let testCoinsData: Data = """
     "image": "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png",
     "current_price": 210,
     "market_cap": 30000000000,
-    "market_cap_rank": 4,
+    "market_cap_rank": 9,
     "fully_diluted_valuation": 35000000000,
     "total_volume": 800000000,
     "high_24h": 215,
@@ -260,7 +261,7 @@ let testCoinsData: Data = """
     "image": "https://assets.coingecko.com/coins/images/4128/large/solana.png",
     "current_price": 24,
     "market_cap": 9000000000,
-    "market_cap_rank": 5,
+    "market_cap_rank": 10,
     "fully_diluted_valuation": 12000000000,
     "total_volume": 1200000000,
     "high_24h": 25,
