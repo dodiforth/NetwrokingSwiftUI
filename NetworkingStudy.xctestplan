@@ -1,0 +1,34 @@
+{
+  "configurations" : [
+    {
+      "id" : "C18388A0-1B0B-4C2A-90AC-FD7E26120840",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPrefLogStreaming",
+        "value" : "YES"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NetworkingStudy.xcodeproj",
+      "identifier" : "3BEEB3F02C878D2C005E2E57",
+      "name" : "NetworkingStudy"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:NetworkingStudy.xcodeproj",
+        "identifier" : "3B2F9C002CBC353C00EC5830",
+        "name" : "NetworkingStudyTests"
+      }
+    }
+  ],
+  "version" : 1
+}

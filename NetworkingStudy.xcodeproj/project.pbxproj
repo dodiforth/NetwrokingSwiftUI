@@ -43,6 +43,7 @@
 		3B2F9C032CBC353C00EC5830 /* NetworkingStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingStudyTests.swift; sourceTree = "<group>"; };
 		3B2F9C0A2CBC357900EC5830 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		3B67F90B2C9E03610067607E /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		3B8508652CC06E5C00032348 /* NetworkingStudy.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkingStudy.xctestplan; sourceTree = "<group>"; };
 		3B9B3AC22CAE921E004D0829 /* CoinDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsView.swift; sourceTree = "<group>"; };
 		3B9B3AC52CAEE6EA004D0829 /* CoinDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetails.swift; sourceTree = "<group>"; };
 		3B9B3AC82CAEE9BF004D0829 /* CoinDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		3BEEB3E82C878D2C005E2E57 = {
 			isa = PBXGroup;
 			children = (
+				3B8508652CC06E5C00032348 /* NetworkingStudy.xctestplan */,
 				3BEEB3F32C878D2C005E2E57 /* NetworkingStudy */,
 				3B2F9C022CBC353C00EC5830 /* NetworkingStudyTests */,
 				3BEEB3F22C878D2C005E2E57 /* Products */,
