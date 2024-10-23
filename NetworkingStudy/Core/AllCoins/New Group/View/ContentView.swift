@@ -22,14 +22,20 @@ struct ContentView: View {
                 ForEach(viewModel.coins) {
                     coin in
                     NavigationLink(value: coin) {
-                        HStack {
+                        HStack(spacing: 12) {
                             Text("\(coin.marketCapRank)").foregroundStyle(Color.gray)
                             
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(coin.name).fontWeight(.semibold)
                                 Text(coin.symbol.uppercased())
                             }
-                        }.font(.footnote)
+                        }
+                        .onAppear {
+                            if coin == viewModel.coins.last {
+                                Task { await viewModel.fetchCoins() }
+                            }
+                        }
+                        .font(.footnote)
                     }
                 }
             }
