@@ -48,6 +48,9 @@ struct ContentView: View {
                 }
             }
         }
+        .task {
+            await viewModel.fetchCoins()
+        }
     }
 }
 
